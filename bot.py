@@ -129,4 +129,10 @@ async def loop(ctx):
     queues.set_loop(id, True)
 
 
+@bot.command(name="unloop")
+async def unloop(ctx):
+    id = ctx.message.guild.id
+    queues.set_loop(id, False)
+
+
 bot.run(DISCORD_TOKEN)
